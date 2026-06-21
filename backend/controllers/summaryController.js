@@ -33,7 +33,11 @@ DOCUMENT:
 ${document.content}
 `;
 
+    console.log("Calling Gemini...");
+    
     const result = await model.generateContent(prompt);
+
+    console.log("Gemini Response Received");
 
     res.status(200).json({
       summary: result.response.text(),

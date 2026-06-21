@@ -7,6 +7,7 @@ const {
   uploadPDF,
   getDocuments,
   getDocumentsByNotebook,
+  deleteDocument,
 } = require("../controllers/documentController");
 
 router.get(
@@ -21,5 +22,7 @@ router.post(
 );
 
 router.get("/", getDocuments);
+
+router.delete("/:id", deleteDocument);
 
 module.exports = router;
