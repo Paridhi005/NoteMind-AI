@@ -316,10 +316,17 @@ http://localhost:5173
 
 ---
 
+## Deployment
+
+Frontend: Vercel
+
+Backend: Render
+
+Database: MongoDB Atlas
+
+---
+
 # Author
 
-**PS**
-
-MCA Mini Project
-
-2026
+Paridhi B. Sureka
+Ashutosh D. Pandey
