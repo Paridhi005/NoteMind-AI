@@ -1,9 +1,7 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const Document = require("../models/Document");
 
-const genAI = new GoogleGenerativeAI(
-  process.env.GEMINI_API_KEY
-);
+const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 const chatWithDocument = async (req, res) => {
   try {
@@ -38,11 +36,14 @@ ${question}
 `;
 
     const result = await model.generateContent(prompt);
+    console.log("Calling Gemini...");
 
     res.status(200).json({
       answer: result.response.text(),
     });
   } catch (error) {
+    console.log(error);
+
     res.status(500).json({
       message: error.message,
     });

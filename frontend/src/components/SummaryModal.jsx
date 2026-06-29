@@ -1,7 +1,10 @@
 import { useState } from "react";
 import API from "../services/api";
+import summaryImg from "../assets/summary.png";
+import { FaTimes, FaBrain } from "react-icons/fa";
+import ReactMarkdown from "react-markdown";
 
-function SummaryModal({ documentId, isOpen, onClose }) {
+function SummaryModal({ isOpen, onClose, documentId }) {
   const [summary, setSummary] = useState("");
   const [loading, setLoading] = useState(false);
 
@@ -16,43 +19,82 @@ function SummaryModal({ documentId, isOpen, onClose }) {
       });
 
       setSummary(res.data.summary);
-
-      setLoading(false);
     } catch (error) {
       console.error(error);
+    } finally {
       setLoading(false);
     }
   };
 
   return (
-    <div className="fixed inset-0 bg-black/40 flex justify-center items-center z-50">
-      <div className="bg-white w-[900px] max-h-[80vh] overflow-y-auto rounded-3xl p-8">
+    <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex justify-center items-center z-50">
+      <div className="bg-white w-[1100px] h-[85vh] rounded-3xl overflow-hidden shadow-2xl flex">
+        {/* LEFT SIDE */}
+        <div className="w-[35%] bg-gradient-to-br from-sky-500 to-blue-700 text-white p-8 flex flex-col">
+          <div className="flex items-center gap-3 mb-6">
+            <FaBrain className="text-3xl" />
+            <h2 className="text-3xl font-bold">AI Summary</h2>
+          </div>
 
-        <div className="flex justify-between mb-6">
-          <h2 className="text-3xl font-bold">
-            AI Summary
-          </h2>
+          <p className="text-white/80 mb-8">
+            Generate exam-friendly notes instantly.
+          </p>
 
-          <button onClick={onClose}>
-            ✕
-          </button>
+          <img src={summaryImg} alt="summary" className="w-full mt-auto" />
         </div>
 
-        <button
-          onClick={generateSummary}
-          className="bg-sky-500 text-white px-6 py-3 rounded-xl mb-6"
-        >
-          Generate Summary
-        </button>
+        {/* RIGHT SIDE */}
+        <div className="flex-1 p-8 flex flex-col">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-2xl font-bold text-slate-800">Smart Notes</h2>
 
-        {loading && (
-          <p>Generating summary...</p>
-        )}
+            <button
+              onClick={onClose}
+              className="text-2xl text-slate-500 hover:text-red-500"
+            >
+              <FaTimes />
+            </button>
+          </div>
 
-        <pre className="whitespace-pre-wrap text-slate-700">
-          {summary}
-        </pre>
+          <button
+            onClick={generateSummary}
+            className="
+              bg-sky-500
+              hover:bg-sky-600
+              text-white
+              px-6
+              py-3
+              rounded-xl
+              font-semibold
+              mb-6
+              w-fit
+              "
+          >
+            {loading ? "Generating..." : "Generate Summary"}
+          </button>
 
+          <div className="flex-1 overflow-y-auto bg-slate-50 rounded-2xl p-6 border">
+            {!summary && !loading && (
+              <div className="text-center mt-20 text-slate-400">
+                Click Generate Summary to create notes
+              </div>
+            )}
+
+            {loading && (
+              <div className="text-center mt-20">
+                <div className="animate-pulse text-sky-500 text-lg">
+                  AI is reading your document...
+                </div>
+              </div>
+            )}
+
+            {summary && (
+              <div className="prose prose-slate max-w-none">
+                <ReactMarkdown>{summary}</ReactMarkdown>
+              </div>
+            )}
+          </div>
+        </div>
       </div>
     </div>
   );
