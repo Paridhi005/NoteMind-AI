@@ -22,7 +22,7 @@ An AI-powered study assistant that helps students learn faster by generating sum
 
 ### Dashboard
 
-![Dashboard](../NoteMind%20AI/screenshorts/dashboard.png)
+![Dashboard](../NoteMind%20AI/screenshots/dashboard.png)
 
 ---
 
