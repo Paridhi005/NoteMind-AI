@@ -4,6 +4,10 @@
 
 An AI-powered study assistant that helps students learn faster by generating summaries, quizzes, flashcards, and document-based Q&A from uploaded PDF notes.
 
+## 🚀 Live Demo
+
+👉 https://your-vercel-url.vercel.app
+
 ---
 
 # Features
