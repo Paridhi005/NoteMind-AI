@@ -1,5 +1,7 @@
 # 📚 NoteMind AI
 
+![Banner](https://raw.githubusercontent.com/Paridhi005/NoteMind-AI/main/screenshots/banner.png)
+
 An AI-powered study assistant that helps students learn faster by generating summaries, quizzes, flashcards, and document-based Q&A from uploaded PDF notes.
 
 ---
