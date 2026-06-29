@@ -22,37 +22,37 @@ An AI-powered study assistant that helps students learn faster by generating sum
 
 ### Dashboard
 
-![Dashboard](/NoteMind%20AI/screenshorts/dashboard.png)
+![Dashboard](../NoteMind%20AI/screenshorts/dashboard.png)
 
 ---
 
 ### Workspace
 
-![Workspace](/NoteMind%20AI/screenshorts/workspace.png)
+![Workspace](../NoteMind%20AI/screenshorts/workspace.png)
 
 ---
 
 ### AI Summary
 
-![Summary](/NoteMind%20AI/screenshorts//summary.png)
+![Summary](../NoteMind%20AI/screenshorts//summary.png)
 
 ---
 
 ### AI Quiz
 
-![Quiz](/NoteMind%20AI/screenshorts/quiz.png)
+![Quiz](../NoteMind%20AI/screenshorts/quiz.png)
 
 ---
 
 ### AI Flashcards
 
-![Flashcards](/NoteMind%20AI/screenshorts/flashcards.png)
+![Flashcards](../NoteMind%20AI/screenshorts/flashcards.png)
 
 ---
 
 ### AI Chat
 
-![Chat](/NoteMind%20AI/screenshorts/chat.png)
+![Chat](../NoteMind%20AI/screenshorts/chat.png)
 
 ---
 
