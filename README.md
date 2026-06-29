@@ -18,6 +18,44 @@ An AI-powered study assistant that helps students learn faster by generating sum
 
 ---
 
+## 📸 Screenshots
+
+### Dashboard
+
+![Dashboard](screenshots/dashboard.png)
+
+---
+
+### Workspace
+
+![Workspace](screenshots/workspace.png)
+
+---
+
+### AI Summary
+
+![Summary](screenshots/summary.png)
+
+---
+
+### AI Quiz
+
+![Quiz](screenshots/quiz.png)
+
+---
+
+### AI Flashcards
+
+![Flashcards](screenshots/flashcards.png)
+
+---
+
+### AI Chat
+
+![Chat](screenshots/chat.png)
+
+---
+
 # Tech Stack
 
 ## Frontend
